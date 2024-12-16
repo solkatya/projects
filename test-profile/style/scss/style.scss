@@ -1,0 +1,75 @@
+ /* MEDIA */
+ $mobile: 980px;
+ $xxs: 375px; //iphone X в портретной ориентации
+ $xs: 414px; //iphone plus в портретной ориентации
+ $sm: 568px; //iphone X в альбомной ориентации
+ $md: 820px; //планшеты в портретной ориентации / телефоны в альбомной
+ $lg: 1024px; //планшеты в альбомной ориентации
+ $xl: 1280px; //ноутбуки
+ $xxl: 1600px; 
+ 
+ 
+  /* COLORS */
+$color-text: #000; //базовый цвет текста
+$color-text-invert: #fff; //инвертированый цвет текста
+$color-heading: #000;
+$color-heading-invert: $color-text-invert;
+ 
+$color-link: #1f2937;                            // цвет текстовых ссылок
+$color-hover: #6b7280;   
+$color-link-hover:#214eaa;                   
+
+$body-background: #fff; 
+$body-background-invert: #000; 
+
+
+$content-width: 1276px; /* ширина контена */
+$content-gap: 40px; /* боковой отступ контента ( на адаптиве ) */
+ 
+
+:root {
+    --background:#f9fafb;
+    --background-rgb:249, 250, 251;
+    --color-text:$color-text;
+    --color-text-rgb:1, 3, 7;
+    color-scheme: light;
+    --content:url('/img/Icon.png');
+    --hover:#6b7280;
+    --hover-rgb: 107, 114, 128;
+    //--link-hover:$color-hover;
+}
+/*Dark*/
+.dark {
+    --background:#030712;
+    --background-rgb:1, 3, 7;
+    --color-text:$color-text-invert;
+    --color-text-rgb:249, 250, 251;
+    color-scheme: dark;
+    --content:url('/img/Icon_Button.png')
+}
+body {
+    background-color: rgba(var(--background-rgb));
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0;
+    font-family: "Heebo";
+    overflow-x: hidden;
+}
+
+.l-conteiner {
+    width: auto;
+    max-width: 100%;
+    margin: 0 $content-gap;
+
+    @media (max-width:$sm){
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+h1 {
+    color: rgb(var(--color-text-rgb));
+}
+
+@import "./blocks/header";
+@import "./blocks/main";

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/media.css">
+    <script src="/js/main.js"></script>
+    <title>Гардиан ФОС</title>
+</head>
+<body>
+    <main class="main">
+        <div class="conteiner">
+            <h1 class="conteiner-header">Оформление заказа</h1>
+            <div class="order-checkout">
+                <div class="order-checkout_form">
+                    <form 
+                    class="checkout"
+                    id="checkout"
+                    action="#"
+                    name="checkout"
+                    method="post"  
+                    >
+                    <div class="form-checkout">
+                        <div class="form-checkout_block">
+                            <div class="form-checkout_header">
+                                <span class="form-checkout_header-info"></span>
+                                <p>Информация о доставке и сервисных услугах</p>
+                            </div>
+                            <div class="form-checkout_conteiner">
+                                <div class="form-checkout_redact">
+                                    <div class="form-checkout_nav js-delivery-type">
+                                        <label id="js_delivery" class="checkout_deliver js_delivery">
+                                            <input 
+                                                type="radio"
+                                                id="delivery"
+                                                name="checkout"
+                                                required="required"
+                                                data-value="delivery"
+                                                value="delivery"
+                                                data-text="Доставка на дом"
+                                                checked="checked"
+                                            >
+                                            <span>
+                                                <svg class="svg-delivery" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                                                    <mask id="mask0_729_18638" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="4" width="22" height="16">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17 8H19.5C19.81 8 20.11 8.15 20.3 8.4L22.6 11.47C22.86 11.82 23 12.24 23 12.67V16C23 16.55 22.55 17 22 17H21C21 18.66 19.66 20 18 20C16.34 20 15 18.66 15 17H9C9 18.66 7.66 20 6 20C4.34 20 3 18.66 3 17C1.9 17 1 16.1 1 15V6C1 4.9 1.9 4 3 4H15C16.1 4 17 4.9 17 6V8ZM5 17C5 17.55 5.45 18 6 18C6.55 18 7 17.55 7 17C7 16.45 6.55 16 6 16C5.45 16 5 16.45 5 17ZM19.5 9.5L21.46 12H17V9.5H19.5ZM17 17C17 17.55 17.45 18 18 18C18.55 18 19 17.55 19 17C19 16.45 18.55 16 18 16C17.45 16 17 16.45 17 17Z" fill="black"/>
+                                                    </mask>
+                                                    <g mask="url(#mask0_729_18638)">
+                                                    <rect width="24" height="24" fill="#19AB4F"/>
+                                                    </g>
+                                                    </svg>
+                                                    
+                                                <span 
+                                                    for="delivery"
+                                                    class="required"
+                                                >Доставка на дом</span>
+                                            </span>
+                                        </label>
+                                        <label id="js_pickup" class="checkout_deliver js_pickup">
+                                            <input 
+                                                type="radio"
+                                                id="pickup"
+                                                name="checkout"
+                                                required="required"
+                                                data-value="pickup"
+                                                value="pickup"
+                                                data-text="Самовывоз"
+                                            >
+                                            <span>
+                                                <svg class="svg-delivery" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="Maps / store mall_directory">
+                                                    <mask id="mask0_729_18651" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="4" width="18" height="16">
+                                                    <g id="Icon Mask">
+                                                    <path id="Round" fill-rule="evenodd" clip-rule="evenodd" d="M19 6H5C4.45 6 4 5.55 4 5C4 4.45 4.45 4 5 4H19C19.55 4 20 4.45 20 5C20 5.55 19.55 6 19 6ZM20.16 7.8C20.07 7.34 19.66 7 19.18 7H4.82C4.34 7 3.93 7.34 3.84 7.8L3 12V13C3 13.55 3.45 14 4 14V19C4 19.55 4.45 20 5 20H13C13.55 20 14 19.55 14 19V14H18V19C18 19.55 18.45 20 19 20C19.55 20 20 19.55 20 19V14C20.55 14 21 13.55 21 13V12L20.16 7.8ZM12 18H6V14H12V18Z" fill="black"/>
+                                                    </g>
+                                                    </mask>
+                                                    <g mask="url(#mask0_729_18651)">
+                                                    <rect id="Color Fill" width="24" height="24" fill="#19AB4F"/>
+                                                    </g>
+                                                    </g>
+                                                    </svg>
+                                                <span 
+                                                    for="pickup"
+                                                    class="required"
+                                                >Самовывоз</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="form-part js-delivery-part">
+                                        <div class="form-item">
+                                            <label class="custom-radio">
+                                                <input 
+                                                    type="radio"
+                                                    id="delivery-part"
+                                                    name="delivery"
+                                                    required="required"
+                                                    value="0"
+                                                    data-text="Доставка внутри МКАД"
+                                                    checked="checked"
+                                                >
+                                                <span class="svg" >
+                                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <rect class="svg" width="16" height="16" rx="8" fill="#19AB4F"/>
+                                                        <circle  cx="8" cy="8" r="4" fill="white"/>
+                                                        </svg>--> 
+                                                    <span 
+                                                    for="delivery-part"
+                                                    class="required"
+                                                    >Доставка в пределах МКАД</span>
+                                                </span>
+                                                <div class="form-item_description">
+                                                    <span>бесплатно</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="form-item">
+                                            <label class="custom-radio">
+                                                <input 
+                                                    type="radio" 
+                                                    id="delivery-in"
+                                                    name="delivery"
+                                                    required="required"
+                                                    value="0"
+                                                    data-text="Доставка внутри МКАД"
+                                                >
+                                                <span class="svg">
+                                                    <label 
+                                                    for="delivery-in"
+                                                    class="required"
+                                                    >Доставка от МКАД </label>
+                                                </span>
+                                                <div class="form-item_description">
+                                                    <span class="description-price">+ 30 ₽/км</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="form-item_distance  -is-show">
+                                            <div class="form-item_distsnce-input">
+                                               <span>Введите количество км от МКАД<br>до вашего населенного пункта</span> 
+                                            </div>
+                                            <input 
+                                                type="number"
+                                                id="form-checkout_distsnce"
+                                                placeholder="км"
+                                                class="form-item_number"
+                                                min="0"
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="form-part is-show">
+                                        <p class="form-part_name">Выберите магазин из которого заберете ваш товар</p>
+                                        <div class="form-checkout_row">
+                                            <div class="form-checkout_column">
+                                                <div class="form-item">
+                                                    <label class="custom-radio">
+                                                        <input 
+                                                            type="radio" 
+                                                            name="shop" 
+                                                            id="checkout_column"
+                                                            required="required"
+                                                            data-text="ТРЦ «ШОКОЛАД» г. Реутов"
+                                                            checked="checked"
+                                                            >
+                                                            <span class="svg">
+                                                                <span for="checkout_column"></span>ТРЦ «ШОКОЛАД» г. Реутов</span>
+                                                            <div class="form-item_description">
+                                                                <span>с 10:00 до 21:00</span>
+                                                                <span>
+                                                                    <p>г. Реутов (м. Новогиреево, м. Новокосино<br>или м. Щелковская) 2 км МКАД,<br> внешняя сторона, 0 этаж, центр зала</p>
+                                                                </span>
+                                                            </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-checkout_column">
+                                                <div class="form-item">
+                                                    <label class="custom-radio">
+                                                        <input 
+                                                            type="radio" 
+                                                            name="shop" 
+                                                            id="checkout_row"
+                                                            required="required"
+                                                            data-text="МТК «АРМАДА»"
+                                                            class="custom-radio"
+                                                            >
+                                                            <span class="svg">
+                                                                <!--<label for="custom-radio"></label>-->МТК «АРМАДА»</span>
+                                                            <div class="form-item_description">
+                                                                <span>с 10:00 до 22:00</span>
+                                                                <span>
+                                                                    <p>м. Пражская, ул. Кировоградская, д.11.<br>корп.1, цокольный этаж, секция «Двери»</p>
+                                                                </span>
+                                                            </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-checkout_help">
+                                        <p class="form-checkout_help-title">Чем еще мы можем вам помочь?</p>
+                                        <div class="form-checkout_help-row">
+                                            <div>
+                                                <div class="form-item">
+                                                    <label class="form-checkbox">
+                                                        <input 
+                                                            type="checkbox"
+                                                            id="climb"
+                                                            name="checkbox-up"
+                                                            data-text="Подъем"
+                                                            value="1"
+                                                            class="custom-checkbox"
+                                                        >
+                                                        <span class="custom-checkbox">
+                                                            <span for="climb" class="required">Подъем</span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="form-item">
+                                                    <label class="custom-radio">
+                                                        <input 
+                                                            type="radio"
+                                                            id="custom"
+                                                            name="checkout"
+                                                            data-text="На грузовом лифте"
+                                                            required="required"
+                                                        
+                                                        >
+                                                        <span class="svg">
+                                                            <span for="custom" class="required">На грузовом лифте
+                                                            </span>
+                                                        </span>
+                                                        <div class="form-item_description">
+                                                            <span class="lift">+ 100 ₽/шт</span>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            
+                                            <div>
+                                                <div class="form-item">
+                                                    <label class="custom-radio">
+                                                        <input 
+                                                            type="radio"
+                                                            id="radio"
+                                                            name="checkout"
+                                                            data-text="По лестнице"
+                                                            required="required"
+                                                        >
+                                                        <span class="svg">
+                                                            <span for="radio" class="required">По лестнице
+                                                            </span>
+                                                        </span>
+                                                        <div class="form-item_description">
+                                                            <span class="ladder">+ 100 ₽/этаж</span>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="form-item_installation">
+                                            <label class="checkbox">
+                                                <input 
+                                                    type="checkbox" 
+                                                    id="installation" 
+                                                    name="checkbox"
+                                                    value="1"
+                                                    data-text="Установка"
+                                                    required="required"
+                                                    class="custom-checkbox"
+                                                >
+                                                <span class="custom-checkbox">
+                                                    <span for="installation" class="required">Установка</span>
+                                                </span>
+                                                <div class="checkout-help">
+                                                    <ul class="checkout-help_dropdown">
+                                                        Установка двери в стандартный проем включает:
+                                                        <li>- сборка дверной коробки</li>
+                                                        <li>- установка дверного блока</li>
+                                                        <li>- установка наличников с двух сторон</li>
+                                                        <li>- резка защелки и двух петель</li>
+                                                        <li>- монтажная пена</li>
+                                                        <li>- крепежные материалы</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="form-item_description">
+                                                    <span class="ladder">+ 3 000 ₽/шт</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button 
+                                        type="button"
+                                        class="form-checkout_btn"
+                                    >Продолжить
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="order-checkout_form">
+                        <div class="form-checkout">
+                            <form 
+                            action="#"
+                            name="order"
+                            id="order"
+                            method="post"
+                            class="checkout">
+                                <div class="form-checkout_block">
+                                    <div class="form-checkout_header">
+                                        <span class="form-checkout_header-info_tw"></span>
+                                        <p>Куда отправить ваш заказ?</p>
+                                    </div>
+                                    <div class="form-checkout_conteiner">
+                                        <div class="form-checkout_redact">
+                                            <div class="form-part">
+                                                <div class="form-item">
+                                                    <span class="form-item_label">
+                                                        <label 
+                                                            for="text"
+                                                            class="required"
+                                                        >Имя</label>
+                                                        <span>*</span>
+                                                    </span>
+                                                    <div class="form-item_label-info">
+                                                    <input 
+                                                        type="text"
+                                                        name="fist-name"
+                                                        id="name"
+                                                        required="required"
+                                                        class="info"
+                                                        
+                                                    >
+                                                    <div class="form-item_example">
+                                                        <span>Например: Иван</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="form-item">
+                                                    <span class="form-item_label">
+                                                        <label 
+                                                            for="text"
+                                                            class="required"
+                                                        >Фамилия</label>
+                                                        <span>*</span>
+                                                    </span>
+                                                    <div class="form-item_label-info">
+                                                    <input 
+                                                        type="text"
+                                                        name=""
+                                                        id="surname"
+                                                        required="required"
+                                                        class="info"
+                                                    >
+                                                    <div class="form-item_example">
+                                                        <span>Например: Иванов</span>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <div class="form-item">
+                                                    <span class="form-item_label">
+                                                        <label 
+                                                            for="text"
+                                                            class="required"
+                                                        >Email</label>
+                                                        <span>*</span>
+                                                    </span>
+                                                    <div class="form-item_label-info">
+                                                    <input 
+                                                        type="text"
+                                                        name=""
+                                                        id="email"
+                                                        required="required"
+                                                        class="info"
+                                                    >
+                                                    <div class="form-item_example">
+                                                        <span>Например: name@domain.com</span>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <div class="form-item">
+                                                    <span class="form-item_label">
+                                                        <label 
+                                                            for="text"
+                                                            class="required"
+                                                        >Телефон</label>
+                                                        <span>*</span>
+                                                    </span>
+                                                    <div  class="form-item_label-info">
+                                                    <input 
+                                                        type="text"
+                                                        name="number"
+                                                        id="number"
+                                                        required="required"
+                                                        class="info"
+                                                    >
+                                                    <div class="form-item_example">
+                                                        <span>Например: +7 (987) 654-32-10</span>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            <div class="form-checkout_delivery">
+                                                <div class="form-item">
+                                                    <span class="form-item_label">
+                                                        <label 
+                                                            for="text"
+                                                            class="required"
+                                                        >Адрес доставки</label>
+                                                        <span>*</span>
+                                                    </span>
+                                                    <div  class="form-item_label-info">
+                                                    <input 
+                                                        type="text"
+                                                        name=""
+                                                        id="address"
+                                                        required="required"
+                                                        class="info"
+                                                    >
+                                                    <div class="form-item_example">
+                                                        <span>Например: Москва, ул. Ленина, 1</span>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-item_group">
+                                                    <div class="form-item">
+                                                        <span class="form-item_label">
+                                                            <label 
+                                                                for="text"
+                                                                class="required"
+                                                            >Квартира/офис</label>
+                                                            <span>*</span>
+                                                        </span>
+                                                        <div  class="form-item_label-info-ap">
+                                                        <input 
+                                                            type="text"
+                                                            name="info"
+                                                            id="apartment"
+                                                            required="required"
+                                                            class="info"
+                                                        >
+                                                        </div>
+                                                    </div>
+                                                        <div class="form-item">
+                                                            <span class="form-item_label">
+                                                                <label 
+                                                                    for="text"
+                                                                    class="required"
+                                                                >Этаж</label>
+                                                                <span>*</span>
+                                                            </span>
+                                                            <div  class="form-item_label-info-fl">
+                                                            <input 
+                                                                type="text"
+                                                                name="info"
+                                                                id="floor"
+                                                                required="required"
+                                                                class="info"
+                                                            >
+                                                            </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-pr">
+                                            <label class="form-checkbox">
+                                                <input 
+                                                    type="checkbox"
+                                                    name="pr"
+                                                    class="custom-checkbox"
+                                                    id="pr"
+                                                    required="required"
+                                                    data-text="Политика Конфиденциальности"
+                                                    value="1"
+                                                >
+                                                <span class="custom-checkbox">
+                                                    Я согласен c 
+                                                    <a href="#">Политикой Конфиденциальности</a>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <button type="button"
+                                        class="form-checkout_btn"
+                                    >Продолжить</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица с линейным графиком</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: rgb(253, 250, 250);
+        }
+        th, td {
+            border: 2px solid white;
+            padding: 8px;
+            background-color: rgb(243, 242, 242);
+        }
+        th {
+            text-align: center;
+            font-weight: 400;
+        }
+        td:first-child{
+            text-align: left;
+        }    
+        td:nth-child(2), td:nth-child(3) {
+            text-align: center;
+        }
+        td:nth-child(4) {
+            text-align: right;
+            padding-right: 40px;
+        }
+        td:nth-child(2), th:nth-child(2) {
+            background-color: rgb(215, 238, 246);
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+        div {
+            display: flex;
+            justify-content: space-around;
+        }
+        p {
+            margin: 0;
+        }
+        .positive {
+            color: green;
+        }
+        .negative {
+            color: red;
+        }
+        .__negative{
+            background-color: rgb(247, 170, 170);
+        }
+        .__positive{
+            background-color: rgb(163, 255, 163);
+        }
+        .chart-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Показатель</th>
+                <th>Текущий день</th>
+                <th>Вчера</th>
+                <th>Этот день недели</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-values="[1000, 1200, 1100]">
+                <td>Выручка, руб</td>
+                <td>1000</td>
+                <td class="__negative">
+                    <div>
+                        <p>1200</p>
+                        <p class="percent">-16.67%</p>
+                    </div>
+                </td>
+                <td class="__negative">1100</td>
+            </tr>
+            <tr data-values="[500, 600, 550]">
+                <td>Наличные</td>
+                <td>500</td>
+                <td class="__negative">
+                    <div>
+                        <p>600</p>
+                        <p class="percent">-16.67%</p>
+                    </div>
+                </td>
+                <td class="__negative">550</td>
+            </tr>
+            <tr data-values="[300, 400, 350]">
+                <td>Безналичный расчет</td>
+                <td>300</td>
+                <td class="__negative">
+                    <div>
+                        <p>400</p>
+                        <p class="percent">-25%</p>
+                    </div>
+                </td>
+                <td class="__negative">350</td>
+            </tr>
+            <tr data-values="[300, 300, 300]">
+                <td>Кредитные карты</td>
+                <td>300</td>
+                <td>
+                    <div>
+                        <p>300</p>
+                        <p class="percent">0%</p>
+                    </div>
+                </td>
+                <td>300</td>
+            </tr>
+            <tr data-values="[50, 60, 55]">
+                <td>Средний чек, руб</td>
+                <td>50</td>
+                <td class="__negative">
+                    <div>
+                        <p>60</p>
+                        <p class="percent">-16.67%</p>
+                    </div>
+                </td>
+                <td class="__negative">55</td>
+            </tr>
+            <tr data-values="[30, 40, 35]">
+                <td>Средний гость, руб</td>
+                <td>30</td>
+                <td class="__negative">
+                    <div>
+                        <p>40</p>
+                        <p class="percent">-25%</p>
+                    </div>
+                </td>
+                <td class="__negative">35</td>
+            </tr>
+            <tr data-values="[20, 25, 22]">
+                <td>Удаление из чека (после оплаты), руб</td>
+                <td>20</td>
+                <td class="__negative">
+                    <div>
+                        <p>25</p>
+                        <p class="percent">-20%</p>
+                    </div>
+                </td>
+                <td class="__negative">22</td>
+            </tr>
+            <tr data-values="[10, 15, 12]">
+                <td>Удаление из чека (до оплаты), руб</td>
+                <td>10</td>
+                <td class="__negative">
+                    <div>
+                        <p>15</p>
+                        <p class="percent">-33.33%</p>
+                    </div>
+                </td>
+                <td class="__negative">12</td>
+            </tr>
+            <tr data-values="[90, 85, 88]">
+                <td>Количество чеков</td>
+                <td>90</td>
+                <td class="__positive">
+                    <div>
+                        <p>88</p>
+                        <p class="percent">5.88%</p>
+                    </div>
+                </td>
+                <td class="__positive">88</td>
+            </tr>
+            <tr data-values="[75, 70, 72]">
+                <td>Количество гостей</td>
+                <td>75</td>
+                <td class="__positive">
+                    <div>
+                        <p>70</p>
+                        <p class="percent">7.14%</p>
+                    </div>
+                </td>
+                <td class="__positive">72</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function() {
+            // Окрашивание ячеек на основе процента
+            $('.percent').each(function() {
+                let value = parseFloat($(this).text());
+                $(this).addClass(value >= 0 ? 'positive' : 'negative');
+            });
+
+            let chartVisible = false;
+
+            // Функция отрисовки графика
+            function renderChart(ctx, values) {
+                return new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['.', '.', '.'], 
+                        datasets: [{
+                            data: values,
+                            backgroundColor: 'rgba(255, 255, 255, 1)',
+                            borderColor: 'green',
+                            borderWidth: 1,
+                            pointRadius: 3,
+                            pointHoverRadius: 7
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                grid: { display: false },
+                                ticks: { display: false }
+                            },
+                            x: {
+                                grid: { display: false },
+                                ticks: { display: false }
+                            }
+                        }
+                    }
+                });
+            }
+
+            $('#data-table tbody tr').click(function(event) {
+                event.stopPropagation();
+                console.log('Row clicked'); // Отладочное сообщение
+
+                const values = JSON.parse($(this).attr('data-values'));
+                const chartContainer = $('.chart-container');
+
+                if (chartVisible) {
+                    chartContainer.remove();
+                    chartVisible = false;
+                } else {
+                    if (chartContainer.length) {
+                        chartContainer.remove();
+                    }
+                    $(this).after(`
+                        <tr class="chart-container">
+                            <td colspan="4">
+                                <canvas id="myChart" width="800px" height="300px"></canvas>
+                            </td>
+                        </tr>
+                    `);
+                    const ctx = $('#myChart')[0].getContext('2d');
+                    renderChart(ctx, values);
+                    chartVisible = true;
+                }
+            });
+
+            $(document).click(function() {
+                if (chartVisible) {
+                    $('.chart-container').remove();
+                    chartVisible = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
