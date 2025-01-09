@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Golos+Text:wght@400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Golos+Text:wght@400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="style\style.css">
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <title>Solodova Catherine Portfolio</title>
+</head>
+<body>
+    <div class="l-conteiner">
+        <div class="l-header">
+            <header>
+                <div class="l-header-top">
+                    <a href="#">Solodova Catherine</a>
+                    <nav class="menu">
+                        <ul>
+                            <li class="menu-item">
+                                <a href="#Work">Work</a></li>
+                            <li class="menu-item">
+                                <a href="#About">About</a></li>
+                            <li class="menu-item">
+                                <a href="#Contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="mobile-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <main>
+            <div class="l-banner">
+                <div class="banner">
+                    <div class="banner-info">
+                        <h1>Hi, I'm Catherine.</h1>
+                        <p>A Vladimir-based interface developer passionate about creating accessible and user-friendly websites.</p>
+                        <div class="banner-links">
+                            <button class="btn" onclick="document.getElementById('Form').scrollIntoView({ behavior: 'smooth' });">Contact Me</button>
+                            <a class="link_dow-resume">View Resume</a>
+                            <div class="banner-links_social">
+                                <a class="link_social -linkidin" href="https://www.linkedin.com/in/ekaterina-solodova-7b938020a/">linkidin</a>
+                                <a class="link_social -github" href="https://github.com/solkatya/">github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-img">
+                        <img src="/img/baner-photo.png" alt="photo Solodova Ekaterina" >
+                    </div>
+                </div>
+                
+            </div>
+            <p class="dividing-line"></p>
+            <div class="l-feature-projects">
+                <div class="feature-projects_title">
+                    <h2 id="Work">Featured Projects</h2>
+                    <p>Here are some of the selected projects that showcase my passion for front-end development.</p>
+                </div>
+                <div class="feature-projects_samples">
+                    <div class="feature-projects_samples-item first">
+                        <div class="feature-projects_samples-img">
+                            <span class="label">Challenge</span>
+                            <img src="/img/projects/first-project.png" alt="">
+                        </div>
+                        <div class="feature-projects_samples-info">
+                            <h3>Table</h3>
+                            <p>Data Calculation Table.</p>
+                            <div class="feature-projects-info">
+                                <p>Project Info</p>
+                                <div class="feature-projects-info_year">
+                                    <span>Year</span>
+                                    <span>2024</span>
+                                </div>
+                                <div class="feature-projects-info_tools">
+                                    <span>Tools</span>
+                                    <span>HTML, CSS, JS</span>
+                                </div>
+                                <div class="feature-projects-info_role">
+                                    <span>Role</span>
+                                    <span>Front-end Developer</span>
+                                </div>
+                            </div>
+                            <div class="feature-projects-btns">
+                                <a href="#" class="feature-projects-btn _demo">Live Demo</a>
+                                <a href="#" class="feature-projects-btn _github">See on Github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-projects_samples-item second">
+                        <div class="feature-projects_samples-img">
+                            <span class="label">Challenge</span>
+                            <img src="/img/projects/second-project.png" alt="">
+                        </div>
+                        <div class="feature-projects_samples-info">
+                            <h3>Guardian-m</h3>
+                            <p>Delivery order form taking into account the road.</p>
+                            <div class="feature-projects-info">
+                                <p>Project Info</p>
+                                <div class="feature-projects-info_year">
+                                    <span>Year</span>
+                                    <span>2023</span>
+                                </div>
+                                <div class="feature-projects-info_tools">
+                                    <span>Tools</span>
+                                    <span>HTML, CSS, JS</span>
+                                </div>
+                                <div class="feature-projects-info_role">
+                                    <span>Role</span>
+                                    <span>Front-end Developer</span>
+                                </div>
+                            </div>
+                            <div class="feature-projects-btns">
+                                <a href="#" class="feature-projects-btn _demo">Live Demo</a>
+                                <a href="#" class="feature-projects-btn _github">See on Github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-projects_samples-item thith">
+                        <div class="feature-projects_samples-img">
+                            <span class="label">Challenge</span>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feature-projects_samples-info">
+                            <h3>Name project</h3>
+                            <p>Description project</p>
+                            <div class="feature-projects-info">
+                                <p>Project Info</p>
+                                <div class="feature-projects-info_year">
+                                    <span>Year</span>
+                                    <span>xxxx</span>
+                                </div>
+                                <div class="feature-projects-info_tools">
+                                    <span>Tools</span>
+                                    <span>Tools</span>
+                                </div>
+                                <div class="feature-projects-info_role">
+                                    <span>Role</span>
+                                    <span>Front-end Developer</span>
+                                </div>
+                            </div>
+                            <div class="feature-projects-btns">
+                                <a href="" class="feature-projects-btn _demo">Live Demo</a>
+                                <a href="" class="feature-projects-btn _github">See on Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <p class="dividing-line"></p>
+            <div class="l-about-me" id="About">
+                <div class="about-me_description">
+                    <h3>I am a front-end developer with one year of experience in my current position.</h3>
+                    <p>Before that, I worked as an SEO optimizer for more than three years, where I analyzed websites and promoted them.</p>
+                    <p>Likes to focus on accessibility when developing. Passionate and curious about solving problems. Currently, I’m exploring Reactjs. </p>
+                    <p>Learning more to improve skill.</p>
+                    <button class="about-me_btn-show" data-open-text="Hide about me" data-close-text="More about me">More about me</button>
+                    <img src="/img/block-about-photo.png" alt="about-photo Solodova Catherine">
+
+                    <script>
+                        $(document).ready(function() {
+                            function aboutMeReset() {
+                                $('.l-about-me').each(function () {
+                                    var block = $(this);
+                                    var btn = block.find('.about-me_btn-show');
+                                    var hiddenParagraphs = block.find('.about-me_description p:not(:first-child)');
+                
+                                    btn.removeClass('is-active').text('More about me').data('open-text', 'Hide about me').data('close-text', 'More about me');
+                                    hiddenParagraphs.addClass('-hidden');
+                                });
+                            }
+                
+                            aboutMeReset();
+                
+                            $('.about-me_btn-show').click(function() {
+                                var btn = $(this);
+                                var hiddenParagraphs = $(this).closest('.about-me_description').find('p:not(:first-child)');
+                
+                                if (!btn.hasClass('is-active')) {
+                                    hiddenParagraphs.removeClass('-hidden');
+                                    btn.addClass('is-active').text('Hide about me');
+                                } else {
+                                    hiddenParagraphs.addClass('-hidden');
+                                    btn.removeClass('is-active').text('More about me');
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="about-me_title">
+                    <h2>About me</h2>
+                    <div class="banner-links">
+                        <a class="btn_downlooad" href="files/Солодова Екатерина  Андреевна.pdf">DOWNLOAD RESUME</a>
+                        <div class="banner-links_social">
+                            <a class="link_social -linkidin" href="https://www.linkedin.com/in/ekaterina-solodova-7b938020a/">linkidin</a>
+                            <a class="link_social -github" href="https://github.com/solkatya/">github</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <p class="dividing-line"></p>
+            <div class="l-tools">
+                <div class="tools">
+                    <div class="tools-title">
+                        <h2>My Capabilities</h2>
+                    </div>
+                    <div class="tools-description">
+                        <p>I love learning new things and growing my skills. Right now, I'm good at the following:</p>
+                        <div class="tools-secription_block">
+                            <ul>
+                                <li class="tools-secription_item">
+                                    <span>HTML</span>
+                                </li>
+                                <li class="tools-secription_item">
+                                    <span>CSS</span>
+                                </li>
+                                <li class="tools-secription_item">
+                                    <span>SCSS</span>
+                                </li>
+                                <li class="tools-secription_item">
+                                    <span>GIT</span>
+                                </li>
+                                <li class="tools-secription_item">
+                                    <span>JQuery</span>
+                                </li>
+                                <li class="tools-secription_item">
+                                    <span>JavaScript</span>
+                                </li>
+                                <li class="tools-secription_item">
+                                    <span>Figma</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="dividing-line"></p>
+            <div class="l-connect" id="Contact">
+                <div class="connect_title">
+                    <div class="title">
+                        <h2>Let’s connect</h2>
+                        <p>Say hello at <a class="link_email" href="katerinaasol98@gmail.com">katerinaasol98@gmail.com</a></p>
+                        <p>For more info, here’s my <a class="link_dow-resume">View Resume</a></p>
+                        <div class="banner-links">
+                            <div class="banner-links_social">
+                                <a class="link_social -linkidin" href="https://www.linkedin.com/in/ekaterina-solodova-7b938020a/">linkidin</a>
+                                <a class="link_social -github" href="https://github.com/solkatya/">github</a>
+                                <a class="link_social -instagram" href="https://www.instagram.com/catherine.repina">instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date __desktope">
+                        <p class="date-name">© 2024| Solodova Catherine</p>
+                    </div>
+                </div>
+                <div class="connect_form" id="Form">
+                    <div class="connect_data">
+                        <div class="form_name">
+                            <p class="form-title">Name</p>
+                            <input type="text" class="_name" placeholder="Name">
+                        </div>
+                        <div class="form_mail">
+                            <p class="form-title">E-mail</p>
+                            <input type="text" class="_mail" placeholder="E-mail">
+                        </div>
+                        <div class="form_subject">
+                            <p class="form-title">Subject</p>
+                            <input type="text" class="_subject" placeholder="Subject">
+                        </div>
+                        <div class="form_message">
+                            <p class="form-title">Message</p>
+                            <textarea name="_message" id="message" rows="5" placeholder="Please write your message."></textarea>
+                        </div>
+                    </div>
+                    <div class="connect_send">
+                        <button class="btn_send">Submit</button>
+                    </div>
+                </div>
+                <div class="date __mobile">
+                    <p class="date-name">© 2024| Solodova Catherine</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <button class="scroll-top js-scroll-top">Scroll</button>
+    <script>
+        $('.js-scroll-top').on('click', function (event) {
+            $("body:not(:animated)").animate({ scrollTop: 0 }, 500);
+            $("html").animate({ scrollTop: 0 }, 500);
+            event.preventDefault();
+        });
+        
+        $(window).on('load scroll', function(){
+            if ($(this).scrollTop()>500 && true ){
+                $('.js-scroll-top').addClass('is-active');
+            } else {
+                $('.js-scroll-top').removeClass('is-active');
+            }
+        });
+    </script>
+</body>
+</html>
